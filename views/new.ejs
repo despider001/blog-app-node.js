@@ -1,0 +1,24 @@
+<% include partials/header %>
+<div class="ui container">
+<h1 class="ui center aligned grid">Add a new post</h1>
+<div class="ui container segment">
+<div class="ui form">
+<form method="POST" action="/blog">
+    <div class="field">
+    <label>Post Title</label>
+    <input type="text" name="blog[title]" placeholder="title of your post" required="required">
+    </div>
+    <div class="field">
+    <label>Image url</label>
+    <input type="text" name= "blog[image]" placeholder="Image url" required="required">
+    </div>
+ <div class="field">
+    <label>Text</label>
+    <textarea name ="blog[description]" placeholder="Post body" required="required"></textarea>
+ </div>
+<p><input class="ui Green Button" type="submit" value="Submit"></p>
+</form>
+</div>
+</div>
+</div>
+<% include partials/footer %>

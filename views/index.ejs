@@ -1,0 +1,31 @@
+<% include partials/header %>
+<div class="ui container">
+<h1 class="ui center aligned header">All blog posts</h1>
+
+<div class="ui items ">
+<% posts.forEach(function(post){ %>
+
+  <div class="item">
+    <div class="image">
+      <img src = "<%= post.image %>" width="400px">
+    </div>
+    <div class="content">
+      <a class="header" href="blog/<%= post._id %>"><%= post.title %></a>
+      <div class="meta">
+        <span></span>
+      </div>
+      <div class="description">
+        <p><%- post.description.substring(0, 350) %></p>
+      </div>
+      <div class="extra">
+        <a href="blog/<%= post._id %>">Read More</a>
+      </div>
+    </div>
+  </div>
+ 
+  <% }) %>
+</div>
+</div>
+
+
+<% include partials/footer %>

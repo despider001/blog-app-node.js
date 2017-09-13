@@ -1,0 +1,24 @@
+<% include partials/header %>
+<h1 class="ui center aligned grid">Edit Post</h1>
+<div class="ui container">
+    <div class="ui container">
+<div class="ui form">
+<form action="/blog/<%= post._id %>?_method=PUT"  method="POST">
+    <div class="field">
+    <label>Post Title</label>
+    <input type="text" name="blog[title]" value="<%= post.title %>" required="required">
+    </div>
+    <div class="field">
+    <label>Image url</label>
+    <input type="text" name= "blog[image]" value="<%= post.image %>" required="required">
+    </div>
+ <div class="field">
+    <label>Text</label>
+    <textarea name ="blog[description]"  required="required"><%= post.description %></textarea>
+ </div>
+<p><input class="ui Green Button" type="submit" value="Submit"></p>
+</form>
+</div>
+</div>
+</div>
+<% include partials/footer %>

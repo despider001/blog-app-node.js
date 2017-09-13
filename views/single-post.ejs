@@ -1,0 +1,16 @@
+<% include partials/header %>
+<div class="ui container">
+    <div class="ui segment">
+<h1><%= post.title %></h1>
+<img src = "<%= post.image %>" width="300px">
+
+<p><%- post.description %></p>
+<div class="inline field">
+   <a class="ui blue button" href="/blog/<%= post._id %>/edit">Edit</a>
+   <form id="delete" method="POST" action="/blog/<%= post._id %>?_method=DELETE">
+       <input type="submit" class="ui red button" value="Delete">
+   </form>
+</div>
+</div>
+</div>
+<% include partials/footer %>
